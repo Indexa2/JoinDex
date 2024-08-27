@@ -1,0 +1,13 @@
+# General plugin settings
+enable-welcome-message: true        # Activate/deactivate the welcome message
+enable-first-join-message: true     # Activate/deactivate the message for new players
+
+# Welcome message for returning players
+welcome-message: "§a¡welcome back, {player}!"
+
+# Welcome message for new players
+first-join-message: "§bIt's your first time here, {player}! We hope you have fun!"
+
+# Console Message Settings
+log-welcome-message: true          # Enables/disables printing messages on the console when a player logs in
+log-first-join-message: true       # Enable/disable printing of console messages for new players
