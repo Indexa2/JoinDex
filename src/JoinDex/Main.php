@@ -20,19 +20,15 @@ class Main extends PluginBase {
     public function onEnable(): void {
         self::setInstance($this);
 
-        // Cargar la configuración
         $this->loadConfigData();
 
-        // Registrar el listener
         $this->getServer()->getPluginManager()->registerEvents(new PlayerJoinListener(), $this);
 
-        // Registrar el comando
         $this->getServer()->getCommandMap()->register("setwelcome", new SetWelcomeCommand());
 
         $this->getLogger()->info("JoinDex enabled!");
     }
 
-    // Método para cargar las configuraciones
     public function loadConfigData(): void {
         $this->saveDefaultConfig();
         $config = $this->getConfig();
@@ -45,7 +41,6 @@ class Main extends PluginBase {
         $this->logFirstJoinMessage = $config->get("log-first-join-message", true);
     }
 
-    // Métodos de acceso a las configuraciones
     public function isWelcomeMessageEnabled(): bool {
         return $this->enableWelcomeMessage;
     }
@@ -70,17 +65,16 @@ class Main extends PluginBase {
         return $this->logFirstJoinMessage;
     }
 
-    // Métodos para establecer los mensajes y guardar en config.yml
     public function setWelcomeMessage(string $message): void {
         $this->getConfig()->set("welcome-message", $message);
         $this->getConfig()->save();
-        $this->loadConfigData(); // Recargar la configuración
+        $this->loadConfigData(); 
     }
 
     public function setFirstJoinMessage(string $message): void {
         $this->getConfig()->set("first-join-message", $message);
         $this->getConfig()->save();
-        $this->loadConfigData(); // Recargar la configuración
+        $this->loadConfigData(); 
     }
 
     public function onDisable(): void {
