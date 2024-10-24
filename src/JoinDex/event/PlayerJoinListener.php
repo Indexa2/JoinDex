@@ -13,7 +13,6 @@ class PlayerJoinListener implements Listener {
         $player = $event->getPlayer();
         $plugin = Main::getInstance();
 
-        // Check if this is the first time the player has joined the server
         if ($player->hasPlayedBefore()) {
             if ($plugin->isWelcomeMessageEnabled()) {
                 $message = $plugin->getWelcomeMessage();
