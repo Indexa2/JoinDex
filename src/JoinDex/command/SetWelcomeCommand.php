@@ -31,7 +31,7 @@ class SetWelcomeCommand extends Command {
         }
 
         $type = strtolower($args[0]);
-        $message = implode(" ", array_slice($args, 1)); // Tomar el resto de los argumentos como el mensaje
+        $message = implode(" ", array_slice($args, 1)); 
 
         $plugin = Main::getInstance();
 
