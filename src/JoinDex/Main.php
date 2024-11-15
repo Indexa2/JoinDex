@@ -26,7 +26,13 @@ class Main extends PluginBase {
 
         $this->getServer()->getCommandMap()->register("setwelcome", new SetWelcomeCommand());
 
-        $this->getLogger()->info("JoinDex enabled!");
+        $this->getLogger()->info("
+░░░░░██╗░█████╗░██╗███╗░░██╗██████╗░███████╗██╗░░██╗
+░░░░░██║██╔══██╗██║████╗░██║██╔══██╗██╔════╝╚██╗██╔╝
+░░░░░██║██║░░██║██║██╔██╗██║██║░░██║█████╗░░░╚███╔╝░
+██╗░░██║██║░░██║██║██║╚████║██║░░██║██╔══╝░░░██╔██╗░
+╚█████╔╝╚█████╔╝██║██║░╚███║██████╔╝███████╗██╔╝╚██╗
+░╚════╝░░╚════╝░╚═╝╚═╝░░╚══╝╚═════╝░╚══════╝╚═╝░░╚═╝");
     }
 
     public function loadConfigData(): void {
