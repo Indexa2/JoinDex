@@ -4,3 +4,7 @@ main: JoinDex\Main
 api: 5.0.0
 author: IndexDev
 description: This plugin welcomes players upon entering!
+permissions:
+  welcomemessage.set:
+    description: Permiso para recibir el mensaje de bienvenida
+    default: true
